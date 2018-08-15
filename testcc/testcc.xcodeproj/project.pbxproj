@@ -1,0 +1,370 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4203D89F20BB8FC700F467F7 /* FirstNotRepeatingChar.c in Sources */ = {isa = PBXBuildFile; fileRef = 4203D89D20BB8FC700F467F7 /* FirstNotRepeatingChar.c */; };
+		426B5BD5205F80A400370855 /* SortAges.c in Sources */ = {isa = PBXBuildFile; fileRef = 426B5BD4205F80A400370855 /* SortAges.c */; };
+		426B5BDA205F9BC800370855 /* MinInOrder.c in Sources */ = {isa = PBXBuildFile; fileRef = 426B5BD8205F9BC800370855 /* MinInOrder.c */; };
+		426B5BDD205FA70200370855 /* Fibonacci.c in Sources */ = {isa = PBXBuildFile; fileRef = 426B5BDB205FA70100370855 /* Fibonacci.c */; };
+		427C9F5320BBD0150073EE2A /* GetNumberOfK.c in Sources */ = {isa = PBXBuildFile; fileRef = 427C9F5120BBD0150073EE2A /* GetNumberOfK.c */; };
+		428CB5B91FECF08D00818729 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 428CB5B81FECF08D00818729 /* main.c */; };
+		42B5BF5420746FC300E25E6E /* LongestPalindrome.c in Sources */ = {isa = PBXBuildFile; fileRef = 42B5BF5220746FC300E25E6E /* LongestPalindrome.c */; };
+		42B5BF7C20844A7A00E25E6E /* Permutation.c in Sources */ = {isa = PBXBuildFile; fileRef = 42B5BF7A20844A7A00E25E6E /* Permutation.c */; };
+		42B5BFE72088390200E25E6E /* FindGreatestSumOfSubArray.c in Sources */ = {isa = PBXBuildFile; fileRef = 42B5BFE52088390200E25E6E /* FindGreatestSumOfSubArray.c */; };
+		42B970AB20B3BAA400330704 /* GetuglyNumbers.c in Sources */ = {isa = PBXBuildFile; fileRef = 42B970A920B3BAA400330704 /* GetuglyNumbers.c */; };
+		42C791EE2060E541004C594A /* NumberOf1.c in Sources */ = {isa = PBXBuildFile; fileRef = 42C791EC2060E541004C594A /* NumberOf1.c */; };
+		42D48BE520EB4E2000315063 /* FindNumbersWithSum.c in Sources */ = {isa = PBXBuildFile; fileRef = 42D48BE320EB4E2000315063 /* FindNumbersWithSum.c */; };
+		42D48BE820EB5B1C00315063 /* ReverseSentence.c in Sources */ = {isa = PBXBuildFile; fileRef = 42D48BE620EB5B1C00315063 /* ReverseSentence.c */; };
+		42D4B48E2058AEE10087B844 /* FindInPartiallySortedMatrix.c in Sources */ = {isa = PBXBuildFile; fileRef = 42D4B48C2058AEE10087B844 /* FindInPartiallySortedMatrix.c */; };
+		42D4B4912058C82E0087B844 /* ReplaceWhiteSpace.c in Sources */ = {isa = PBXBuildFile; fileRef = 42D4B48F2058C82E0087B844 /* ReplaceWhiteSpace.c */; };
+		42F9D28F2068C76000CAC80F /* Print1ToMaxOfNumber.c in Sources */ = {isa = PBXBuildFile; fileRef = 42F9D28D2068C76000CAC80F /* Print1ToMaxOfNumber.c */; };
+		42F9D2922068E8A800CAC80F /* ReOrderOddEven.c in Sources */ = {isa = PBXBuildFile; fileRef = 42F9D2902068E8A800CAC80F /* ReOrderOddEven.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		428CB5B31FECF08D00818729 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4203D89D20BB8FC700F467F7 /* FirstNotRepeatingChar.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = FirstNotRepeatingChar.c; sourceTree = "<group>"; };
+		4203D89E20BB8FC700F467F7 /* FirstNotRepeatingChar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstNotRepeatingChar.h; sourceTree = "<group>"; };
+		426B5BD4205F80A400370855 /* SortAges.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = SortAges.c; sourceTree = "<group>"; };
+		426B5BD7205F85E600370855 /* SortAges.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SortAges.h; sourceTree = "<group>"; };
+		426B5BD8205F9BC800370855 /* MinInOrder.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = MinInOrder.c; sourceTree = "<group>"; };
+		426B5BD9205F9BC800370855 /* MinInOrder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MinInOrder.h; sourceTree = "<group>"; };
+		426B5BDB205FA70100370855 /* Fibonacci.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Fibonacci.c; sourceTree = "<group>"; };
+		426B5BDC205FA70100370855 /* Fibonacci.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fibonacci.h; sourceTree = "<group>"; };
+		427C9F5120BBD0150073EE2A /* GetNumberOfK.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = GetNumberOfK.c; sourceTree = "<group>"; };
+		427C9F5220BBD0150073EE2A /* GetNumberOfK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetNumberOfK.h; sourceTree = "<group>"; };
+		428CB5B51FECF08D00818729 /* testcc */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = testcc; sourceTree = BUILT_PRODUCTS_DIR; };
+		428CB5B81FECF08D00818729 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		42B5BF5220746FC300E25E6E /* LongestPalindrome.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = LongestPalindrome.c; sourceTree = "<group>"; };
+		42B5BF5320746FC300E25E6E /* LongestPalindrome.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LongestPalindrome.h; sourceTree = "<group>"; };
+		42B5BF7A20844A7A00E25E6E /* Permutation.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Permutation.c; sourceTree = "<group>"; };
+		42B5BF7B20844A7A00E25E6E /* Permutation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Permutation.h; sourceTree = "<group>"; };
+		42B5BFE52088390200E25E6E /* FindGreatestSumOfSubArray.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = FindGreatestSumOfSubArray.c; sourceTree = "<group>"; };
+		42B5BFE62088390200E25E6E /* FindGreatestSumOfSubArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FindGreatestSumOfSubArray.h; sourceTree = "<group>"; };
+		42B970A920B3BAA400330704 /* GetuglyNumbers.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = GetuglyNumbers.c; sourceTree = "<group>"; };
+		42B970AA20B3BAA400330704 /* GetuglyNumbers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetuglyNumbers.h; sourceTree = "<group>"; };
+		42C791EC2060E541004C594A /* NumberOf1.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = NumberOf1.c; sourceTree = "<group>"; };
+		42C791ED2060E541004C594A /* NumberOf1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NumberOf1.h; sourceTree = "<group>"; };
+		42D48BE320EB4E2000315063 /* FindNumbersWithSum.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = FindNumbersWithSum.c; sourceTree = "<group>"; };
+		42D48BE420EB4E2000315063 /* FindNumbersWithSum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FindNumbersWithSum.h; sourceTree = "<group>"; };
+		42D48BE620EB5B1C00315063 /* ReverseSentence.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ReverseSentence.c; sourceTree = "<group>"; };
+		42D48BE720EB5B1C00315063 /* ReverseSentence.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReverseSentence.h; sourceTree = "<group>"; };
+		42D4B48C2058AEE10087B844 /* FindInPartiallySortedMatrix.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = FindInPartiallySortedMatrix.c; sourceTree = "<group>"; };
+		42D4B48D2058AEE10087B844 /* FindInPartiallySortedMatrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FindInPartiallySortedMatrix.h; sourceTree = "<group>"; };
+		42D4B48F2058C82E0087B844 /* ReplaceWhiteSpace.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ReplaceWhiteSpace.c; sourceTree = "<group>"; };
+		42D4B4902058C82E0087B844 /* ReplaceWhiteSpace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReplaceWhiteSpace.h; sourceTree = "<group>"; };
+		42F9D28D2068C76000CAC80F /* Print1ToMaxOfNumber.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Print1ToMaxOfNumber.c; sourceTree = "<group>"; };
+		42F9D28E2068C76000CAC80F /* Print1ToMaxOfNumber.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Print1ToMaxOfNumber.h; sourceTree = "<group>"; };
+		42F9D2902068E8A800CAC80F /* ReOrderOddEven.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ReOrderOddEven.c; sourceTree = "<group>"; };
+		42F9D2912068E8A800CAC80F /* ReOrderOddEven.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReOrderOddEven.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		428CB5B21FECF08D00818729 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		428CB5AC1FECF08D00818729 = {
+			isa = PBXGroup;
+			children = (
+				428CB5B71FECF08D00818729 /* testcc */,
+				428CB5B61FECF08D00818729 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		428CB5B61FECF08D00818729 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				428CB5B51FECF08D00818729 /* testcc */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		428CB5B71FECF08D00818729 /* testcc */ = {
+			isa = PBXGroup;
+			children = (
+				428CB5B81FECF08D00818729 /* main.c */,
+				42D4B48D2058AEE10087B844 /* FindInPartiallySortedMatrix.h */,
+				42D4B48C2058AEE10087B844 /* FindInPartiallySortedMatrix.c */,
+				42D4B4902058C82E0087B844 /* ReplaceWhiteSpace.h */,
+				42D4B48F2058C82E0087B844 /* ReplaceWhiteSpace.c */,
+				426B5BD7205F85E600370855 /* SortAges.h */,
+				426B5BD4205F80A400370855 /* SortAges.c */,
+				426B5BD8205F9BC800370855 /* MinInOrder.c */,
+				426B5BD9205F9BC800370855 /* MinInOrder.h */,
+				426B5BDB205FA70100370855 /* Fibonacci.c */,
+				426B5BDC205FA70100370855 /* Fibonacci.h */,
+				42C791EC2060E541004C594A /* NumberOf1.c */,
+				42C791ED2060E541004C594A /* NumberOf1.h */,
+				42F9D28D2068C76000CAC80F /* Print1ToMaxOfNumber.c */,
+				42F9D28E2068C76000CAC80F /* Print1ToMaxOfNumber.h */,
+				42F9D2902068E8A800CAC80F /* ReOrderOddEven.c */,
+				42F9D2912068E8A800CAC80F /* ReOrderOddEven.h */,
+				42B5BF5220746FC300E25E6E /* LongestPalindrome.c */,
+				42B5BF5320746FC300E25E6E /* LongestPalindrome.h */,
+				42B5BF7A20844A7A00E25E6E /* Permutation.c */,
+				42B5BF7B20844A7A00E25E6E /* Permutation.h */,
+				42B5BFE52088390200E25E6E /* FindGreatestSumOfSubArray.c */,
+				42B5BFE62088390200E25E6E /* FindGreatestSumOfSubArray.h */,
+				42B970A920B3BAA400330704 /* GetuglyNumbers.c */,
+				42B970AA20B3BAA400330704 /* GetuglyNumbers.h */,
+				4203D89D20BB8FC700F467F7 /* FirstNotRepeatingChar.c */,
+				4203D89E20BB8FC700F467F7 /* FirstNotRepeatingChar.h */,
+				427C9F5120BBD0150073EE2A /* GetNumberOfK.c */,
+				427C9F5220BBD0150073EE2A /* GetNumberOfK.h */,
+				42D48BE320EB4E2000315063 /* FindNumbersWithSum.c */,
+				42D48BE420EB4E2000315063 /* FindNumbersWithSum.h */,
+				42D48BE620EB5B1C00315063 /* ReverseSentence.c */,
+				42D48BE720EB5B1C00315063 /* ReverseSentence.h */,
+			);
+			path = testcc;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		428CB5B41FECF08D00818729 /* testcc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 428CB5BC1FECF08D00818729 /* Build configuration list for PBXNativeTarget "testcc" */;
+			buildPhases = (
+				428CB5B11FECF08D00818729 /* Sources */,
+				428CB5B21FECF08D00818729 /* Frameworks */,
+				428CB5B31FECF08D00818729 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = testcc;
+			productName = testcc;
+			productReference = 428CB5B51FECF08D00818729 /* testcc */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		428CB5AD1FECF08D00818729 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = FlyOceanFish;
+				TargetAttributes = {
+					428CB5B41FECF08D00818729 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 428CB5B01FECF08D00818729 /* Build configuration list for PBXProject "testcc" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 428CB5AC1FECF08D00818729;
+			productRefGroup = 428CB5B61FECF08D00818729 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				428CB5B41FECF08D00818729 /* testcc */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		428CB5B11FECF08D00818729 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42D4B4912058C82E0087B844 /* ReplaceWhiteSpace.c in Sources */,
+				42D4B48E2058AEE10087B844 /* FindInPartiallySortedMatrix.c in Sources */,
+				42C791EE2060E541004C594A /* NumberOf1.c in Sources */,
+				42D48BE520EB4E2000315063 /* FindNumbersWithSum.c in Sources */,
+				42F9D28F2068C76000CAC80F /* Print1ToMaxOfNumber.c in Sources */,
+				42D48BE820EB5B1C00315063 /* ReverseSentence.c in Sources */,
+				42B970AB20B3BAA400330704 /* GetuglyNumbers.c in Sources */,
+				42F9D2922068E8A800CAC80F /* ReOrderOddEven.c in Sources */,
+				428CB5B91FECF08D00818729 /* main.c in Sources */,
+				427C9F5320BBD0150073EE2A /* GetNumberOfK.c in Sources */,
+				426B5BD5205F80A400370855 /* SortAges.c in Sources */,
+				4203D89F20BB8FC700F467F7 /* FirstNotRepeatingChar.c in Sources */,
+				42B5BF5420746FC300E25E6E /* LongestPalindrome.c in Sources */,
+				426B5BDD205FA70200370855 /* Fibonacci.c in Sources */,
+				42B5BF7C20844A7A00E25E6E /* Permutation.c in Sources */,
+				426B5BDA205F9BC800370855 /* MinInOrder.c in Sources */,
+				42B5BFE72088390200E25E6E /* FindGreatestSumOfSubArray.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		428CB5BA1FECF08D00818729 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		428CB5BB1FECF08D00818729 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		428CB5BD1FECF08D00818729 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		428CB5BE1FECF08D00818729 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		428CB5B01FECF08D00818729 /* Build configuration list for PBXProject "testcc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				428CB5BA1FECF08D00818729 /* Debug */,
+				428CB5BB1FECF08D00818729 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		428CB5BC1FECF08D00818729 /* Build configuration list for PBXNativeTarget "testcc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				428CB5BD1FECF08D00818729 /* Debug */,
+				428CB5BE1FECF08D00818729 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 428CB5AD1FECF08D00818729 /* Project object */;
+}
