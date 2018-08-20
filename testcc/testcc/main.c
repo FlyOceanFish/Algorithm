@@ -280,8 +280,133 @@ int* countSmaller(int* nums, int numsSize, int* returnSize) {
     }
     return ret;
 }
+int jump(int* nums, int numsSize) {
+    if(numsSize==1){
+        return 0;
+    }
+    if ((numsSize==2&&nums[0]>=1)||(nums[0]>=numsSize-1)) {
+        return 1;
+    }
+    int max = nums[0];
+    int preMax = nums[0];
+    int index = 0;
+    for (int i = 2;i<numsSize;i++){
+        for(int j=index+1;j<max+1;j++){
+            int temp = j+nums[j];
+            if (temp>=preMax){
+                preMax = temp;
+                index = j;
+            }
+            if(temp>=numsSize-1){
+                return i;
+            }
+        }
+        max = preMax;
+    }
+    return 0;
+}
+void reverse2(int start,int end,char *s)
+{
+    char temp;
+    while(start<end){
+        temp = s[end];
+        s[end--]=s[start];
+        s[start++]=temp;
+    }
+}
+char* reverseStr(char* s, int k) {
+    int len = strlen(s);
+    if(len<k){
+        reverse2(0,len-1,s);
+        return s;
+    }
+    int rang = 0;
+    int index = 0;
+    while(rang<=len){
+        int right = rang+k-1;
+        
+        if(right>len){
+            right = len-1;
+        }
+        reverse2(rang,right,s);
+        index++;
+        rang = k*index*2;
+    }
+    return s;
+}
+void test(int i){
+    i++;
+    if (i>10) {
+        return;
+    }
+    printf("** %d **\n",i);
+    test(i);
+    
+    printf("我是结束** %d **\n",i);
+}
+//"mississippi"
+//"issipi"
+int strStr(char* haystack, char* needle) {
+    if(haystack==NULL||needle==NULL)
+        return -1;
+    if (*needle=='\0') {
+        return 0;
+    }
+    if (strlen(haystack)<strlen(needle)) {
+        return -1;
+    }
+    char *tmp = needle;
+    int index = -1;
+    int result = -1;
+    int indexTmp = index;
+    char *haystacktmp = "";
+    while(*haystack){
+        index++;
+        if(*haystack==*tmp){
+            tmp++;
+            if (result==-1) {
+                result = index;
+                haystacktmp = haystack;
+                indexTmp = index;
+            }
+        }else{
+            if (result!=-1) {
+                result = -1;
+                haystack = haystacktmp;
+                index = indexTmp;
+            }
+            tmp = needle;
+        }
+        haystack++;
+        if (*tmp=='\0') {
+            return result;
+        }
+        if (*haystack=='\0'&&*tmp!='\0') {
+            result = -1;
+        }
 
+    }
+    return result;
+}
+
+int removeElement(int* nums, int numsSize, int val) {
+    int length = 0;
+    for (int i = 0; i < numsSize; ++i)
+    {
+        if (nums[i] != val)
+        {
+            nums[length++] = nums[i];
+        }
+    }
+    return length;
+}
 int main(int argc, const char * argv[]) {
+    int nums[] = {};
+    removeElement(nums, 0, 4);
+//    char a[] = "abcdefg";
+//    char *tmp = reverseStr(a,2);
+//    printf("%c",*tmp);
+    
 //    isPalindrome(121);
 //    char s[] = "abc";
 //    permutation(s);
@@ -305,12 +430,15 @@ int main(int argc, const char * argv[]) {
 //    }
 //    char str[] = "I am a Student";
 //    char *temp = reverseSentence(str);
-    int nums[] = {0,1,2};
-    int *result = countSmaller(nums, 3, NULL);
-    while (*result) {
-        printf("%d--\n",*result);
-        result++;
-    }
+//    int nums[] = {0,1,2};
+//    int *result = countSmaller(nums, 3, NULL);
+//    while (*result) {
+//        printf("%d--\n",*result);
+//        result++;
+//    }
+//    int nums[] = {2,3,1,1,4};
+//    int jumps = jump(nums, sizeof(nums)/sizeof(nums[0]));
+//    printf("%d--\n",jumps);
     return 0;
 }
 
