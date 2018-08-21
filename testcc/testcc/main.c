@@ -400,13 +400,137 @@ int removeElement(int* nums, int numsSize, int val) {
     }
     return length;
 }
-int main(int argc, const char * argv[]) {
-    int nums[] = {};
-    removeElement(nums, 0, 4);
-//    char a[] = "abcdefg";
-//    char *tmp = reverseStr(a,2);
-//    printf("%c",*tmp);
+
+  struct ListNode {
+      int val;
+      struct ListNode *next;
+  };
+ 
+struct ListNode* mergeTwoLists(struct ListNode* l1, struct ListNode* l2) {
+    struct ListNode *l1tmp = l1;
+    struct ListNode *l2tmp = l2;
+    while(l1tmp!=NULL){
+        struct ListNode *pre = NULL;
+        while (l2tmp!=NULL) {
+            if (l1tmp->val<=l2tmp->val&&(l1tmp->next==NULL||l2tmp->val<=l1tmp->next->val)) {
+                struct ListNode *tmp1 = l1tmp->next;
+                struct ListNode *tmp2 = l2tmp->next;
+                pre = l2tmp;
+                l1tmp->next = l2tmp;
+                l2tmp->next = tmp1;
+                
+                l2tmp = tmp2;
+                continue;
+            }else{
+                l1tmp = pre;
+                break;
+            }
+        }
+        l1tmp = l1tmp->next;
+    }
+    if (l2tmp!=NULL) {
+        l1tmp->next = l2tmp;
+    }
+    return l1;
+}
+int removeDuplicates(int* nums, int numsSize) {
+    if (numsSize<=0) {
+        return 0;
+    }
+    int length = 0;
+    int pre = INT16_MIN;
+    for (int i = 0; i<numsSize; i++) {
+        int tmp = nums[i];
+        if (pre!=tmp) {
+            pre = tmp;
+            nums[length++] = tmp;
+        }
+    }
+    return length;
+}
+
+bool isValid(char* s) {
+    long len = strlen(s);
+    if((len&1)==1) return false;
     
+    long limit = len/2;
+    char *stack = malloc(limit);
+    int idx = 0;
+    
+    for(int i=0; i<len; ++i){
+        char cur = s[i];
+        if(cur=='(' || cur=='{' || cur=='['){
+            if(idx == limit) return false;
+            stack[idx++] = cur;
+        }else{
+            if(idx == 0) return false;
+            if((cur == '}' && stack[idx-1] == '{') || (cur == ']' && stack[idx-1] == '[') || (cur == ')' && stack[idx-1] == '(')){
+                idx--;
+            }else{
+                return false;
+            }
+        }
+    }
+    
+    free(stack);
+    return idx==0;
+}
+char* longestCommonPrefix(char** strs, int strsSize) {
+    int ii = 0, jj = 0;
+    long minlen = 0;
+    char c; // = strs[0][0];
+    char* ans;
+
+    minlen = strlen(strs[0]);
+    for (ii = 1; ii < strsSize; ii++) {
+        
+        minlen = strlen(strs[ii]) < minlen ? strlen(strs[ii]) : minlen;
+    }
+    ans = (char*)malloc((minlen+1)*sizeof(char));
+    memset(ans, 0x00, (minlen+1)*sizeof(char));
+    for (ii = 0; ii < minlen; ii++) {
+        c = strs[0][ii];
+        for (jj = 1; jj < strsSize; jj++) {
+            if (strs[jj][ii] != c)
+                break;
+        }
+        if (jj != strsSize)
+            return ans;
+        
+        ans[ii] = c;
+    }
+    return ans;
+}
+int** threeSum(int* nums, int numsSize, int* returnSize) {
+    int **result = malloc(sizeof(int)*numsSize);
+    
+    return result;
+}
+int main(int argc, const char * argv[]) {
+    
+    char *strs[3] = {"flower","flow","flight"};
+    char *result = longestCommonPrefix(strs, 3);
+    
+//    char *tmp = "(([()]){})";
+//    bool result = isValid(tmp);
+//    printf("%d\n",result);
+//    int nums[] = {-1,0,0,0,0,3,3};
+//    int result = removeDuplicates(nums, sizeof(nums)/sizeof(nums[0]));
+//    printf("** %d ** \n",result);
+//    struct ListNode l3 = {4,NULL};
+
+//    struct ListNode l2 = {2,NULL};
+//
+//    struct ListNode l1 = {1,&l2};
+//
+//    struct ListNode l23 = {4,NULL};
+//
+//    struct ListNode l22 = {3,&l23};
+//
+//    struct ListNode l21 = {1,&l22};
+//    mergeTwoLists(&l1, &l21);
+    
+//    printf("%d\n",l1.next->val);
 //    isPalindrome(121);
 //    char s[] = "abc";
 //    permutation(s);
