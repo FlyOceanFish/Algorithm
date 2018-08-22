@@ -587,17 +587,68 @@ struct ListNode* reverseList2(struct ListNode* head) {
     }
     return head;
 }
+//此题很简单，但是主要不能通过数字相加来解决，因为会越界
+int* plusOne(int* digits, int digitsSize, int* returnSize) {
+    int *result = (int *)malloc(sizeof(int)*(digitsSize));
+    int a = 1;
+    for(int i = digitsSize-1;i>=0;i--){
+        int tmp = digits[i];
+        int sum = 0;
+        if (a>0) {
+            sum = tmp+1;
+            if (sum==10) {
+                a = 1;
+                sum = 0;
+            }else{
+                a = 0;
+            }
+        }else{
+            sum = tmp;
+        }
+        result[i] = sum;
+    }
 
+    if (a>0) {
+        result[0] = 1;
+        result = realloc(result, sizeof(int)*(digitsSize+1));
+        for (int i = digitsSize; i>0; i--) {
+            result[i] = 0;
+        }
+//        *returnSize = digitsSize+1;
+    }else{
+//        *returnSize = digitsSize;
+
+    }
+
+    
+    return result;
+}
+int climbStairs(int n) {
+    if (n==2) {
+        return 2;
+    }
+    if (n==1) {
+        return 1;
+    }
+
+    return climbStairs(n-1)+climbStairs(n-2);
+}
 int main(int argc, const char * argv[]) {
-    struct ListNode l1 = {4,NULL};
-
-    struct ListNode l2 = {3,&l1};
-
-    struct ListNode l3 = {2,&l2};
-
-    struct ListNode l4 = {1,&l3};
-    struct ListNode *result = reverseList(&l4);
-                                        
+    int result = climbStairs(44);
+    printf("%d\n",result);
+//    int nums[] = {9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9};
+////    int nums[] = {9};
+//    plusOne(nums, sizeof(nums)/sizeof(nums[0]), NULL);
+    
+//    struct ListNode l1 = {4,NULL};
+//
+//    struct ListNode l2 = {3,&l1};
+//
+//    struct ListNode l3 = {2,&l2};
+//
+//    struct ListNode l4 = {1,&l3};
+//    struct ListNode *result = reverseList(&l4);
+                            
 //    bool result = isPalindrome2("race a car");
 //    printf("%d\n",result);
     
