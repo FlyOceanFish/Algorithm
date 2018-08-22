@@ -9,6 +9,8 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <_ctype.h>
+
 #include "FindInPartiallySortedMatrix.h"
 #include "ReplaceWhiteSpace.h"
 #include "SortAges.h"
@@ -506,10 +508,101 @@ int** threeSum(int* nums, int numsSize, int* returnSize) {
     
     return result;
 }
-int main(int argc, const char * argv[]) {
+
+bool isLetter(char a){
+    if(('a'<=a&&a<='z')||('A'<=a&&a<='Z'))
+        return true;
+    return false;
+}
+bool isNumber(char a){
+    if ('0'<=a&&a<='9') {
+        return true;
+    }
+    return false;
+}
+bool isPalindrome2(char* s) {
+    long len = strlen(s);
+    char *start = s;
+    char *end = s+len-1;
+    while(start<end){
+        char a = *start;
+        char b = *end;
+        while(!isLetter(a)&&!isNumber(a)){
+            if (start==s+len-1) {
+                return true;
+            }
+            start++;
+            a = *start;
+        }
+        while(!isLetter(b)&&!isNumber(b)){
+            if (end==s) {
+                return true;
+            }
+            end--;
+            b = *end;
+        }
+        if (isLetter(a)&&isLetter(b)) {
+            if((a==b)||(abs(b-a)==('a'-'A'))){
+                start++;
+                end--;
+            }else{
+                return false;
+            }
+        }else if (isNumber(a)&&isNumber(b)){
+            if(a==b){
+                start++;
+                end--;
+            }else{
+                return false;
+            }
+        }else{
+            return false;
+        }
+
+    }
+    return true;
+}
+struct ListNode* reverseList(struct ListNode* head) {
+    if(NULL==head||NULL==head->next) return head;
     
-    char *strs[3] = {"flower","flow","flight"};
-    char *result = longestCommonPrefix(strs, 3);
+    struct ListNode *p=head->next;
+    head->next=NULL;
+    struct ListNode *newhead=reverseList(p);
+    p->next=head;
+    
+    return newhead;
+}
+
+struct ListNode* reverseList2(struct ListNode* head) {
+    if(NULL==head) return head;
+    
+    struct ListNode *p=head;
+    p=head->next;
+    head->next=NULL;
+    while(NULL!=p){
+        struct ListNode *ptmp=p->next;
+        p->next=head;
+        head=p;
+        p=ptmp;
+    }
+    return head;
+}
+
+int main(int argc, const char * argv[]) {
+    struct ListNode l1 = {4,NULL};
+
+    struct ListNode l2 = {3,&l1};
+
+    struct ListNode l3 = {2,&l2};
+
+    struct ListNode l4 = {1,&l3};
+    struct ListNode *result = reverseList(&l4);
+                                        
+//    bool result = isPalindrome2("race a car");
+//    printf("%d\n",result);
+    
+//    char *strs[3] = {"flower","flow","flight"};
+//    char *result = longestCommonPrefix(strs, 3);
     
 //    char *tmp = "(([()]){})";
 //    bool result = isValid(tmp);
@@ -521,13 +614,7 @@ int main(int argc, const char * argv[]) {
 
 //    struct ListNode l2 = {2,NULL};
 //
-//    struct ListNode l1 = {1,&l2};
-//
-//    struct ListNode l23 = {4,NULL};
-//
-//    struct ListNode l22 = {3,&l23};
-//
-//    struct ListNode l21 = {1,&l22};
+
 //    mergeTwoLists(&l1, &l21);
     
 //    printf("%d\n",l1.next->val);
