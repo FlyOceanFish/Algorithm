@@ -623,7 +623,7 @@ int* plusOne(int* digits, int digitsSize, int* returnSize) {
     
     return result;
 }
-//斐波那契数列
+//斐波那契数列 递归太深，导致运行时间过长
 int climbStairs(int n) {
     if (n==2) {
         return 2;
@@ -634,6 +634,7 @@ int climbStairs(int n) {
 
     return climbStairs(n-1)+climbStairs(n-2);
 }
+//非递归的方式实现
 int climbStairs2(int n) {
     // base cases
     if(n <= 0) return 0;
@@ -651,13 +652,101 @@ int climbStairs2(int n) {
     }
     return all_ways;
 }
+void merge(int* nums1, int m, int* nums2, int n) {
+    if(m==0&&n>0){
+        for(int i = 0;i<n;i++){
+            nums1[i] = nums2[i];
+        }
+    }
+    int count = m+n-1;
+    int iValue = n-1;
+    for (int j=m-1;j>=0;j--){
+        int num1 = nums1[j];
+        if (iValue==-1) {
+            break;
+        }
+        for(int i = iValue;i>=0;i--){
+            int num2 = nums2[i];
+            if(num2>=num1){
+                nums1[count] = num2;
+                count--;
+                iValue = i-1;
+            }else{
+                nums1[count] = num1;
+                count--;
+                iValue = i;
+                break;
+            }
+        }
+    }
+    if(iValue>=0){
+        for(int i = 0;i<=iValue;i++){
+            nums1[i] = nums2[i];
+        }
+    }
+}
+int countChars(char a,char * chars){
+    int count = 0;
+    while (*chars) {
+        if (a==*chars) {
+            count++;
+            chars++;
+        }else{
+            break;
+        }
+    }
+    return count;
+}
+char* countAndSay(int n) {
+    
+    char *result = malloc(sizeof(char)*2);
+    result[0]='1';
+    result[1]='\0';
+    unsigned long length = 1;
+    
+    for (int i = 1; i<n; i++) {
+        char *freeChar = result;
+        length = strlen(result);
+        char *tmp = malloc(sizeof(char)*(length*2+1));
+        int index = 0;
+        while (*result) {
+            char a = *result;
+            int count = countChars(a, result);
+            tmp[index++]='0'+count;
+            tmp[index++]=*result;
+            result = result+count;
+        }
+        tmp[index]='\0';
+        free(freeChar);
+        result = tmp;
+    }
+    return result;
+}
+
 int main(int argc, const char * argv[]) {
-    int result = climbStairs(44);
-    printf("%d\n",result);
+    
+    return 0;
+}
+
+//测试数据
+//char *result = countAndSay(13);
+//while (*result) {
+//    printf("%c\n",*result);
+//    result++;
+//}
+//int nums1[] = {2,0};
+//int nums2[] = {1};
+//merge(nums1, 1, nums2, 1);
+//for (int i = 0; i<sizeof(nums1)/sizeof(nums1[0]); i++) {
+//    printf("%d\n",nums1[i]);
+//}
+
+//    int result = climbStairs(44);
+//    printf("%d\n",result);
 //    int nums[] = {9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9,9};
 ////    int nums[] = {9};
 //    plusOne(nums, sizeof(nums)/sizeof(nums[0]), NULL);
-    
+
 //    struct ListNode l1 = {4,NULL};
 //
 //    struct ListNode l2 = {3,&l1};
@@ -666,13 +755,13 @@ int main(int argc, const char * argv[]) {
 //
 //    struct ListNode l4 = {1,&l3};
 //    struct ListNode *result = reverseList(&l4);
-                            
+                        
 //    bool result = isPalindrome2("race a car");
 //    printf("%d\n",result);
-    
+
 //    char *strs[3] = {"flower","flow","flight"};
 //    char *result = longestCommonPrefix(strs, 3);
-    
+
 //    char *tmp = "(([()]){})";
 //    bool result = isValid(tmp);
 //    printf("%d\n",result);
@@ -685,7 +774,7 @@ int main(int argc, const char * argv[]) {
 //
 
 //    mergeTwoLists(&l1, &l21);
-    
+
 //    printf("%d\n",l1.next->val);
 //    isPalindrome(121);
 //    char s[] = "abc";
@@ -719,7 +808,3 @@ int main(int argc, const char * argv[]) {
 //    int nums[] = {2,3,1,1,4};
 //    int jumps = jump(nums, sizeof(nums)/sizeof(nums[0]));
 //    printf("%d--\n",jumps);
-    return 0;
-}
-
-
