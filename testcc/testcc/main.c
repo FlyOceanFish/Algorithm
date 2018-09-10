@@ -722,9 +722,49 @@ char* countAndSay(int n) {
     }
     return result;
 }
+void quickSort(int *nums,int num){
+    int k = nums[0];
+    int i = 0;
+    int j = num-1;
+    if (num>1) {
+        while (i!=j) {
+            for (; j>i; j--) {
+                if (nums[j]<k) {
+                    nums[i] = nums[j];
+                    break;
+                }
+            }
+            for (; i<j; i++) {
+                if (nums[i]>k) {
+                    nums[j] = nums[i];
+                    break;
+                }
+            }
+            nums[i] = k;
+        }
+        quickSort(nums, i);
+        quickSort(nums+i+1, num-i-1);
+    }
 
+}
+//https://blog.csdn.net/huolang_vip/article/details/44201015 关于加法位运算实现的详解
+int add(int a,int b){
+    if (b==0) {
+        return a;
+    }
+    int sum = a ^ b;
+    int carry = (a&b)<<1;
+    return add(sum, carry);
+}
 int main(int argc, const char * argv[]) {
-    
+    int result = add(2, -3);
+    printf("%d\n",result);
+//    int nums[] = {9,2,7,10};
+//    int num = sizeof(nums)/sizeof(nums[0]);
+//    quickSort(nums,num );
+//    for (int i = 0; i<num; i++) {
+//        printf("%d\n",nums[i]);
+//    }
     return 0;
 }
 
